@@ -2,10 +2,10 @@
 
 <dl>
   <dt>APR</dt>
-  <dd><%= (@rate * 100).round(4) %>%</dd>
+  <dd><%= number_to_percentage(@rate * 100, precision: 4) %></dd>
 
   <dt>Monthly Payment</dt>
-  <dd>$<%= '%.2f' % @payment %></dd>
+  <dd><%= number_to_currency(@payment) %></dd>
 </dl>
 
 <a href="/payment/new">Calculate another payment</a> 
