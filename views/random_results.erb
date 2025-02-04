@@ -1,0 +1,14 @@
+<h1>Random Number Results</h1>
+
+<dl>
+  <dt>Minimum</dt>
+  <dd><%= params.fetch("user_min") %></dd>
+
+  <dt>Maximum</dt>
+  <dd><%= params.fetch("user_max") %></dd>
+
+  <dt>Random number</dt>
+  <dd><%= @random %></dd>
+</dl>
+
+<a href="/random/new">Pick another random number</a> 
