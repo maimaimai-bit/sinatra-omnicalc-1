@@ -2,16 +2,10 @@
 
 <dl>
   <dt>APR</dt>
-  <dd><%= params.fetch("user_apr").to_fs(:percentage, precision: 4) %></dd>
+  <dd><%= (@rate * 100).round(4) %>%</dd>
 
-  <dt>Number of years</dt>
-  <dd><%= params.fetch("user_years") %></dd>
-
-  <dt>Principal</dt>
-  <dd><%= params.fetch("user_principal").to_fs(:currency) %></dd>
-
-  <dt>Payment</dt>
-  <dd><%= @payment.to_fs(:currency) %></dd>
+  <dt>Monthly Payment</dt>
+  <dd>$<%= '%.2f' % @payment %></dd>
 </dl>
 
 <a href="/payment/new">Calculate another payment</a> 
